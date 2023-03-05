@@ -7,18 +7,20 @@ const loadAllData = () =>{
     .then(data => getData(data))
     .catch(error => console.log(error))
 }
-const getData = data =>{
-    console.log(data)
+const getData = (data) =>{
+    // console.log(data)
     data.forEach(key => {
         const rank = key.rank;
         const personName = key.personName;
         const citizenOf = key.countryOfCitizenship;
         const industry = key.industries
         displayData(rank, personName, citizenOf, industry);
+        return [rank, personName, citizenOf, industry]
     })
 }
 
 function displayData(rank, personName, citizenOf, industry){
+    
     document.getElementById("t-body").innerHTML += `
     <tr class="odd:bg-white even:bg:slate-100">
         <td>${rank}</td>
@@ -28,4 +30,33 @@ function displayData(rank, personName, citizenOf, industry){
     </tr>
     `
 }
+
+document.getElementById("btn-youngest").addEventListener("click", function(){
+    document.getElementById("t-body").innerHTML =""
+    url = "https://forbes400.onrender.com/api/forbes400/youngest";
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayYougest(data))
+
+    
+})
+function displayYougest(data){
+       const[rank, personName, citizen, industry] =  getData(data)
+        displayData(rank, personName, citizen, industry); 
+}
+
+document.getElementById("btn-female").addEventListener("click", function(){
+    document.getElementById("t-body").innerHTML =""
+    url = "https://forbes400.onrender.com/api/forbes400/femaile";
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayYougest(data))
+
+    
+})
+function displayYougest(data){
+       const[rank, personName, citizen, industry] =  getData(data)
+        displayData(rank, personName, citizen, industry); 
+}
+
 loadAllData()
