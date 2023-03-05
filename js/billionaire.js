@@ -13,8 +13,19 @@ const getData = data =>{
         const rank = key.rank;
         const personName = key.personName;
         const citizenOf = key.countryOfCitizenship;
-        console.log(key)
+        const industry = key.industries
+        displayData(rank, personName, citizenOf, industry);
     })
 }
 
+function displayData(rank, personName, citizenOf, industry){
+    document.getElementById("t-body").innerHTML += `
+    <tr class="odd:bg-white even:bg:slate-100">
+        <td>${rank}</td>
+        <td>${personName ? personName : "No data found"}</td>
+        <td>${citizenOf ? citizenOf : "No data found"}</td>
+        <td>${industry}</td>
+    </tr>
+    `
+}
 loadAllData()
