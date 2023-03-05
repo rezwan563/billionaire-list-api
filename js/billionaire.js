@@ -47,16 +47,31 @@ function displayYougest(data){
 
 document.getElementById("btn-female").addEventListener("click", function(){
     document.getElementById("t-body").innerHTML =""
-    url = "https://forbes400.onrender.com/api/forbes400/femaile";
+    url = "https://forbes400.onrender.com/api/forbes400/female";
     fetch(url)
     .then(res => res.json())
-    .then(data => displayYougest(data))
+    .then(data => displayFemale(data))
 
     
 })
-function displayYougest(data){
+function displayFemale(data){
        const[rank, personName, citizen, industry] =  getData(data)
         displayData(rank, personName, citizen, industry); 
 }
+
+document.getElementById("btn-male").addEventListener("click", function(){
+    document.getElementById("t-body").innerHTML =""
+    url = "https://forbes400.onrender.com/api/forbes400/male";
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayMale(data))
+
+    
+})
+function displayMale(data){
+       const[rank, personName, citizen, industry] =  getData(data)
+        displayData(rank, personName, citizen, industry); 
+}
+
 
 loadAllData()
