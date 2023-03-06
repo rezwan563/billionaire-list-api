@@ -93,7 +93,12 @@ const personDetails = (data, rank) =>{
         // console.log(key.rank)
         const _isRank = key.rank;
         if(_isRank === rank){
-            console.log(key.person);
+            console.log(key.person.squareImage);
+            const staticImage = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdesibooks.co%2Fheadshot-dummy%2F&psig=AOvVaw25aCMfJpE-IJQyXgY3kF--&ust=1678183557958000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOiPsYiHx_0CFQAAAAAdAAAAABAE"
+            const personImage = key.person.squareImage;
+            document.getElementById("image-box").innerHTML =`
+            <img src="${personImage}" alt="">
+            `
             console.log(`${_isRank} is clicked`)
         }
     })
