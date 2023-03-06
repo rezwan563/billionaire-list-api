@@ -27,6 +27,7 @@ function displayData(rank, personName, citizenOf, industry){
         <td>${personName ? personName : "No data found"}</td>
         <td>${citizenOf ? citizenOf : "No data found"}</td>
         <td>${industry}</td>
+        <td><button class="bg-blue-400 hover:bg-blue-700 text-white p-2 rounded-md">More</button>
     </tr>
     `
 }
