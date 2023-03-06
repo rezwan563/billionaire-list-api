@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Billionaire</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <main>
         <section class="h-screen flex">
@@ -15,15 +17,18 @@
                     <div class="  border border-black">
                         <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6">
                             <div class="md:col-span-2  lg:col-span-2 gap-2 bg-blue-100 m-auto">
-                                
-                                
-                                <button id="btn-youngest"class="w-full bg-white hover:bg-black hover:text-white hover:font-bold p-2 mb-2">Youngest</button>
-                                <button id="btn-female" class="w-full bg-white hover:bg-black hover:text-white hover:font-bold p-2 mb-2">Female</button>
-                                <button id="btn-male"class="w-full bg-white hover:bg-black hover:text-white hover:font-bold p-2 mb-2">Male</button>
+
+
+                                <button id="btn-youngest"
+                                    class="w-full bg-white hover:bg-black hover:text-white hover:font-bold p-2 mb-2">Youngest</button>
+                                <button id="btn-female"
+                                    class="w-full bg-white hover:bg-black hover:text-white hover:font-bold p-2 mb-2">Female</button>
+                                <button id="btn-male"
+                                    class="w-full bg-white hover:bg-black hover:text-white hover:font-bold p-2 mb-2">Male</button>
                             </div>
-                            <div class="md:col-span-4 lg:col-span-4  bg-slate-200 h-[75vh] overflow-scroll" >
-                                
-                                <table class="table-fixed md:w-full lg:w-full   text-center">
+                            <div class="md:col-span-4 lg:col-span-4  bg-slate-200 h-[75vh] overflow-scroll">
+
+                                <table class="table-auto md:w-full lg:w-full   text-center">
                                     <thead>
                                         <tr>
                                             <th>Rank</th>
@@ -40,6 +45,19 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div>
+                                <!-- The button to open modal -->
+                               
+                                <!-- Put this part before  tag -->
+                                <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+                                <label for="my-modal-4" class="modal cursor-pointer">
+                                    <label class="modal-box max-w-4xl h-3/4 relative" for="">
+                                        <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
+                                        <p class="py-4">You've been selected for a chance to get one year of
+                                            subscription to use Wikipedia for free!</p>
+                                    </label>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,8 +65,9 @@
         </section>
     </main>
 
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/billionaire.js"></script>
 </body>
+
 </html>
