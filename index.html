@@ -11,8 +11,9 @@
 
 <body>
     <main>
+        <div class="h-16"><h1 class="flex justify-center pt-2  font-semibold text-4xl">List of Billionaires</h1></div>
         <section class="h-screen flex">
-            <div class="w-3/4 m-auto">
+            <div class="w-3/4 mx-auto">
                 <div class="bg-slate-50">
                     <div class="  border border-black">
                         <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6">
@@ -54,28 +55,43 @@
                                     <label class="modal-box max-w-4xl h-3/4 relative" for="">
                                         <div class="h-full">
                                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full">
-                                                <div class="bg-yellow-200">
-                                                    <h1>This is left section</h1>
+                                                <div class="bg-slate-50 pl-4 ">
+                                                    <div id="wealth-section">
+                                                        <!-- <h1><span class="font-2xl font-semibold">Estimated wealth</span>(in million $)</h1> -->
+                                                        <p id="person-wealth" class="text-4xl"></p>
+                                                    </div>
+                                                    <div class="mt-8">
+                                                        <table class="w-full text-center">
+                                                            <thead>
+                                                                <tr id="t-head">
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="" id="modal-t-body">
+                                                                <!-- <tr>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr> -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
-                                                <div class="bg-purple-400 ">
-                                                    <h1>This is left section</h1>
+                                                <div class="bg-slate-50">
                                                     <div class="grid grid-cols-3">
-                                                        <div class="bg-pink-600">
-                                                            <h1>This is left empty</h1>
+                                                        <div class="bg-slate-100">
                                                         </div>
-                                                        <div class="col-span-2 bg-red-400">
-                                                            <h1>This is right</h1>
+                                                        <div class="col-span-2 ">
                                                             <div class="grid grid-row-3 ">
                                                                 <div id="image-box" class="row-span-2">
-                                                                    <h1>This is image box</h1>
                                                                     <!-- <img src="" alt=""> -->
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="">
-                                                        <div>Left Side Personal Info
-                                                            <h1 class="font-bold text-xl">Bio</h1>
+                                                    <div class="p-8 bg-slate-50">
+                                                        <div>
+                                                            <h1 id="text-bio" class="font-bold text-xl"></h1>
                                                             <p id="person-bio" class=""></p>
                                                         </div>
                                                         
